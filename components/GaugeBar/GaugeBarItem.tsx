@@ -1,4 +1,4 @@
-import { Direction } from "@/types/Types";
+import { Direction } from "@/types/index";
 import React from "react";
 import ThumbsIcon from "../ThumbsIcon";
 

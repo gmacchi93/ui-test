@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import { Personality } from "@/types/Types";
+import { Personality } from "@/types/index";
 import React from "react";
 import GaugeBar from "./GaugeBar/GaugeBar";
 import ThumbsButton from "./ThumbsButton";
