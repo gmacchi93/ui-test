@@ -3,5 +3,6 @@ export * from './models';
 export * from './data';
 export * from './status';
 export * from './API';
+export * from './utils';
 
 

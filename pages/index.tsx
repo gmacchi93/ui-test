@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import ItemCard from "@/components/ItemCard";
 import Nav from "@/components/Nav";
+import PersonalitiesList from "@/components/PersonalitiesList";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
@@ -21,20 +22,7 @@ export default function Home() {
       <div className="max-centered">
         <BannerTop />
         <main role="main">
-          <ItemCard
-            personality={{
-              name: "Kanye West",
-              description:
-                "Born in Atlanta and raised in Chicago, West was first known as a producer for Roc-A-Fella Records in the early 2000s, producing singles for several mainstream artists.",
-              category: "entertainment",
-              picture: "kanye.png",
-              lastUpdated: "2020-03-10T23:08:57.892Z",
-              votes: {
-                positive: 23,
-                negative: 36,
-              },
-            }}
-          />
+          <PersonalitiesList />
         </main>
         <BannerBottom />
         <Footer />

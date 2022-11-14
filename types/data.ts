@@ -1,5 +1,6 @@
 import { TablePersonalitiesFilterInput } from "@/src/API";
 import { Personality } from "./models";
+import { statusTypes } from "./status";
 
 export interface PersonalityState {
   items: Personality[];
@@ -8,6 +9,16 @@ export interface PersonalityState {
 
 export interface PersonalitiesState {
   personalities: PersonalityState;
+}
+
+
+export interface StatusState {
+  [key: string]: statusTypes 
+}
+
+export interface AppState {
+  personalities: PersonalitiesState;
+  status: StatusState;
 }
 
 export interface ListPersonalitiesItems {

@@ -11,12 +11,17 @@ const onFetchPersonalitiesSuccess = (
 ):PersonalitiesState => {
   const {
     data: {
-      listPersonalities,
+      listPersonalities:{
+        items,
+        nextToken
+      },
     },
   } = action;
+  const formattedItems = items.map(item => ({...item, votes: JSON.parse(item.votes.toString())}))
+
   return {
     ...state,
-    personalities: { ...listPersonalities}
+    personalities: { items: formattedItems, nextToken}
   };
 };
 

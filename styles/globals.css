@@ -1,3 +1,79 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer components {
+    .dropdown-list li > button {
+        @apply border-t-0
+    }
+
+    .personalities-grid > div {
+        @apply sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:gap-[1.3125rem] lg:gap-[1.6875rem]
+    }
+
+    .personalities-grid .icon-button, .personalities-grid div > .thumbs-icon-container {
+        @apply sm:w-[1.875rem] sm:h-[1.875rem]
+    }
+
+    .personalities-grid .gauge-bar {
+        @apply sm:h-[2.25rem]
+    }
+
+    .personalities-grid .item-card {
+        @apply sm:aspect-square sm:h-auto sm:w-auto
+    }
+
+    .personalities-grid .item-card-gradient {
+        @apply sm:hidden
+    }
+
+    .personalities-grid .item-photo {
+        @apply sm:left-0
+    }
+
+    .personalities-grid .item-photo > img {
+        @apply sm:w-full sm:h-full
+    }
+
+    .personalities-grid .item-card-info {
+        @apply sm:flex-col sm:px-8 sm:gap-3
+    }
+
+    .personalities-grid .item-card-info div {
+        @apply sm:gap-2
+    }
+
+    .personalities-grid .item-card-info footer {
+        @apply sm:gap-3
+    }
+
+    .personalities-grid .item-card-status {
+        @apply top-[calc(50%-0.875rem)]
+    }
+
+    .personalities-grid .gauge-bar p {
+        @apply sm:text-xl
+    }
+
+    .personalities-grid .item-card-info p {
+        @apply sm:text-[0.9375rem]
+    }
+
+    .personalities-grid h3 {
+        @apply sm:text-[1.875rem] lg:text-4xl
+    }
+
+    .personalities-grid small {
+        @apply sm:text-xs
+    }
+
+    .personalities-grid button {
+        @apply sm:h-[2.375rem]
+    }
+
+    .personalities-grid .item-card > .item-cart-content-container {
+        @apply sm:gap-3
+    }
+
+}

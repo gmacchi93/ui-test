@@ -7,7 +7,7 @@ type Props = {
 
 const ThumbsIcon = ({ direction }: Props) => {
   return (
-    <div className="relative w-full h-full">
+    <div className="thumbs-icon relative w-full h-full">
       <Image
         src={`/assets/img/thumbs-${direction}.svg`}
         alt={`thumbs ${direction}`}
