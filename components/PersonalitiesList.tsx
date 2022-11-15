@@ -7,6 +7,8 @@ import getStatus from "selectors/StatusSelectors";
 import { actionTypes, AppState, Option } from "../types";
 import Dropdown from "./Dropdown/Dropdown";
 import ItemCard from "./ItemCard";
+import ItemCardLoader from "./ItemCardLoader";
+import PersonalitiesListLoader from "./PersonalitiesListLoader";
 
 type Props = {};
 
@@ -33,25 +35,28 @@ const PersonalitiesList = (props: Props) => {
     <section>
       <div className="flex flex-row">
         <h2 className="flex-1 text-2xl font-light">Previous Rulings</h2>
-        <Dropdown
-          id="dropdown-list-view"
-          options={options}
-          selected={listView}
-          onSelect={(option: Option) => {
-            setlistView(option.value);
-          }}
-        />
+        <div className="hidden sm:block">
+          <Dropdown
+            id="dropdown-list-view"
+            options={options}
+            selected={listView}
+            onSelect={(option: Option) => {
+              setlistView(option.value);
+            }}
+          />
+        </div>
       </div>
       <div
         className={`${
           listView === "grid" ? "personalities-grid" : "personalities-list"
         }`}
       >
-        <div className="flex flex-row sm:flex-col overflow-x-auto gap-4 pb-4">
+        {isSuccess && <div className="flex flex-row sm:flex-col overflow-x-auto gap-4 pb-4">
           {personalities.map((personality) => (
             <ItemCard key={personality.id} personality={personality} />
           ))}
-        </div>
+        </div>}
+        {isLoading && <PersonalitiesListLoader />} 
       </div>
     </section>
   );

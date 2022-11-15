@@ -1,7 +1,7 @@
 import { statusTypes } from "@/types/status";
 import { actionTypes, AppState } from "../types";
 
-const getStatus = (state: AppState, action: actionTypes) => {
+const getStatus = (state: AppState, action: actionTypes | string) => {
   const status = state.status[`${action}`];
   const isSuccess = status === statusTypes.SUCCESS;
   const isError = status === statusTypes.ERROR;

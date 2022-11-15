@@ -481,6 +481,8 @@ main h2 {
     .hero__background {
         top: -6.5rem;
         left: 0;
+        right: 0;
+        bottom: 0;
         width: 110vw;
         height: auto;
     }
@@ -645,7 +647,8 @@ main h2 {
     .hero__background {
         top: -2.5rem;
         left: 0;
-        width: 100vw;
+        right: 0;
+        bottom: 0;
         height: auto;
     }
 

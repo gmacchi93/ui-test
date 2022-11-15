@@ -29,7 +29,7 @@ const Nav = (props: Props) => {
               <a href="#">Login / Sign Up</a>
             </li>
             <li>
-              <form action="javascript:void(0)">
+              <form>
                 <input
                   className="nav__search-input"
                   aria-label="search"

@@ -29,10 +29,10 @@
     }
 
     .personalities-grid .item-photo {
-        @apply sm:left-0
+        @apply sm:left-0 sm:inset-0
     }
 
-    .personalities-grid .item-photo > img {
+    .personalities-grid .item-photo > div {
         @apply sm:w-full sm:h-full
     }
 
@@ -74,6 +74,23 @@
 
     .personalities-grid .item-card > .item-cart-content-container {
         @apply sm:gap-3
+    }
+
+    .personalities-grid .icon-button[aria-checked="true"] {
+        @apply border-[0.125rem] border-solid border-white w-[2.125rem] h-[2.125rem]
+    }
+
+
+    .icon-button[aria-checked="true"] {
+        @apply border-[0.125rem] border-solid border-white w-[2.125rem] h-[2.125rem] lg:w-[3.0625rem] lg:h-[3.0625rem]
+    }
+
+    .custom-button[disabled],.custom-button:disabled  {
+        @apply bg-black bg-opacity-60
+    }
+
+    .custom-button {
+        background: rgba(48, 48, 48, 0.6);
     }
 
 }

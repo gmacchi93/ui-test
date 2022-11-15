@@ -1,4 +1,5 @@
-import { ListPersonalitiesItems } from "./data";
+import { GetPersonalitiesItems, ListPersonalitiesItems } from "./data";
+import { Personality, Votes } from "./models";
 
 export enum actionTypes {
   FETCH_PERSONALITIES = "FETCH_PERSONALITIES",
@@ -28,5 +29,25 @@ export interface FetchPersonalitiesSuccess {
 
 export interface FetchPersonalitiesError {
     type: actionTypes.FETCH_PERSONALITIES_ERROR,
+    error: Error
+}
+
+export interface Vote {
+    type: actionTypes.VOTE,
+    id: string,
+    votes: Votes,
+}
+
+export interface VoteRequest {
+    type: actionTypes.VOTE_REQUEST,
+}
+
+export interface VoteSuccess {
+    type: string,
+    data: Personality,
+}
+
+export interface VoteError {
+    type: actionTypes.VOTE_ERROR,
     error: Error
 }

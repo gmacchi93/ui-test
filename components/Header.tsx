@@ -10,9 +10,8 @@ const Header = (props: Props) => {
         <Image
           src="/assets/img/pope-francis.png"
           alt="Pope Francis"
-          layout="responsive"
-          width={1980}
-          height={985}
+          fill
+          className="object-cover"
         />
       </div>
 
@@ -47,21 +46,25 @@ const Header = (props: Props) => {
             </p>
             <p className="featured-card__cta">What&apos;s Your Veredict?</p>
             <div className="featured-card__buttons">
-              <button className="icon-button" aria-label="thumbs up">
-                <Image
-                  src="/assets/img/thumbs-up.svg"
-                  alt="thumbs up"
-                  width={36}
-                  height={36}
-                />
+              <button className="icon-button lg:py-3" aria-label="thumbs up">
+                <div className="relative flex items-center justify-center py-4">
+                  <Image
+                    src="/assets/img/thumbs-up.svg"
+                    alt="thumbs up"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
               </button>
-              <button className="icon-button" aria-label="thumbs down">
-                <Image
-                  src="/assets/img/thumbs-down.svg"
-                  alt="thumbs down"
-                  width={36}
-                  height={36}
-                />
+              <button className="icon-button lg:py-3" aria-label="thumbs down">
+                <div className="relative flex items-center justify-center py-4">
+                  <Image
+                    src="/assets/img/thumbs-down.svg"
+                    alt="thumbs down"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
               </button>
             </div>
           </div>

@@ -28,6 +28,14 @@ export interface ListPersonalitiesItems {
   },
 }
 
+export interface UpdatePersonalitiesGraphQL {
+  data: UpdatePersonalitiesItems,
+}
+
+export interface UpdatePersonalitiesItems {
+  updatePersonalities: Personality,
+}
+
 export interface FetchPersonalitiesVariables {
   limit?: number,
   filter?: TablePersonalitiesFilterInput,
@@ -41,3 +49,16 @@ export interface GetPersonalityVariables {
 export interface ListPersonalitiesGraphQL {
   data: ListPersonalitiesItems;
 }
+
+// ----
+export interface GetPersonalitiesItems {
+  getPersonalities: Personality,
+}
+
+export interface GetPersonalitiesGraphQL {
+  data: GetPersonalitiesItems;
+}
+
+export interface GetPersonalitiesVariables {
+  jobId: string,
+};
